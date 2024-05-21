@@ -1,4 +1,5 @@
-﻿using Restaurant.Core.Models;
+﻿using Restaurant.Core.DTOs;
+using Restaurant.Core.Models;
 using Restaurant.Core.Repositories;
 using Restaurant.Core.Services;
 using System;
@@ -16,29 +17,30 @@ namespace Restaurant.Service.Services
         {
             _employeeRepository = employeeRepository;
         }
-        Employee IEmployeeService.AddEmployee(Employee employee)
+
+        public async Task<Employee> AddEmployeeAsync(Employee Employee)
         {
-          return _employeeRepository.AddEmployee(employee);
+            return await _employeeRepository.AddEmployeeAsync(Employee);
         }
 
-        public void DeleteEmployee(int id)
+        public async Task DeleteEmployeeAsync(int id)
         {
-            _employeeRepository.DeleteEmployee(id);
+            await _employeeRepository.DeleteEmployeeAsync(id);
         }
 
-        IEnumerable<Employee> IEmployeeService.GetEmployees()
+        public async Task<Employee> GetEmployeeByIdAsync(int id)
         {
-            return _employeeRepository.GetEmployees();
+            return await _employeeRepository.GetEmployeeByIdAsync(id);
         }
 
-        Employee IEmployeeService.GetById(int id)
+        public async Task<IEnumerable<Employee>> GetEmployeesAsync()
         {
-            return _employeeRepository.GetById(id);
+            return await _employeeRepository.GetEmployeesAsync();
         }
 
-        Employee IEmployeeService.UpdateEmployee(int id, Employee employee)
+        public async Task<Employee> UpdateEmployeeAsync(int id, Employee Employee)
         {
-            return _employeeRepository.UpdateEmployee(id, employee);
+            return await _employeeRepository.UpdateEmployeeAsync(id, Employee); 
         }
     }
 }

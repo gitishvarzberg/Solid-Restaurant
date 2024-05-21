@@ -16,25 +16,30 @@ namespace Restaurant.Service.Services
         {
             _orderRepository = orderRepository;
         }
-        Order IOrderService.AddOrder(Order order)
+
+        public async Task<Order> AddOrderAsync(Order Order)
         {
-            return _orderRepository.AddOrder(order);
+            return await _orderRepository.AddOrderAsync(Order);
         }
-        public void DeleteOrder(int id)
+
+        public async Task DeleteOrderAsync(int id)
         {
-            _orderRepository.DeleteOrder(id);
+            await _orderRepository.DeleteOrderAsync(id);    
         }
-        IEnumerable<Order> IOrderService.GetOrders()
+
+        public async Task<Order> GetOrderByIdAsync(int id)
         {
-            return _orderRepository.GetOrders();
+            return await _orderRepository.GetOrderByIdAsync(id);
         }
-        Order IOrderService.GetById(int id)
+
+        public async Task<IEnumerable<Order>> GetOrdersAsync()
         {
-            return _orderRepository.GetById(id);
+            return await _orderRepository.GetOrdersAsync();
         }
-        Order IOrderService.UpdateOrder(int id, Order order)
+
+        public async Task<Order> UpdateOrderAsync(int id, Order Order)
         {
-            return _orderRepository.UpdateOrder(id, order);
+            return await _orderRepository.UpdateOrderAsync(id, Order);  
         }
     }
 }

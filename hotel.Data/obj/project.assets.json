@@ -2941,11 +2941,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Data\\Restaurant.Data.csproj",
+      "projectUniqueName": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Data\\Restaurant.Data.csproj",
       "projectName": "Restaurant.Data",
-      "projectPath": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Data\\Restaurant.Data.csproj",
+      "projectPath": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Data\\Restaurant.Data.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Data\\obj\\",
+      "outputPath": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2966,8 +2966,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Core\\Restaurant.Core.csproj": {
-              "projectPath": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Core\\Restaurant.Core.csproj"
+            "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Core\\Restaurant.Core.csproj": {
+              "projectPath": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Core\\Restaurant.Core.csproj"
             }
           }
         }

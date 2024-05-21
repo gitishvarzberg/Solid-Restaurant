@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using Restaurant.Core.DTOs;
 using Restaurant.Core.Models;
 using Restaurant.Core.Services;
+using Restaurant.Service.Services;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -24,55 +25,60 @@ namespace lesson3.Controllers
         }
         // GET: api/<OrdersController>
         [HttpGet]
-        public ActionResult Get()
+        public async Task< ActionResult> Get()
         {
-            var orders = _orderService.GetOrders();
-            var ordersDTOs = _mapper.Map<IEnumerable<EmployeeDTOs>>(orders);
+            var orders = await _orderService.GetOrdersAsync();    
+            var ordersDTOs = _mapper.Map<IEnumerable<OrderDTOs>>(orders);
             return Ok(ordersDTOs);
+
         }
 
         // GET api/<OrdersController>/5
         [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        public async Task < ActionResult> Get(int id)
         {
-            var order = _orderService.GetById(id);
+            var order =await _orderService.GetOrderByIdAsync(id);
             var orderDTOs=_mapper.Map<OrderDTOs>(order);    
             return Ok(orderDTOs);
         }
 
         // POST api/<OrdersController>
         [HttpPost]
-        public ActionResult Post([FromBody] OrderPostModel order)
+        public async Task <ActionResult> Post([FromBody] Order order)
         {
-            var orderToAdd = (new Order
-            {
-                OrderId = order.OrderId,
-                NameClient = order.NameClient,
-                Date = order.Date,
-                DosesCount = order.DosesCount,
-            });
-            return Ok( _orderService.AddOrder(orderToAdd));
+            var orderToAdd = await _orderService.AddOrderAsync(_mapper.Map<Order>(order));
+            return Ok(_mapper.Map<OrderDTOs>(orderToAdd));
+
         }
+
 
         // PUT api/<OrdersController>/5
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] OrderPostModel order)
+        public async Task <ActionResult> Put(int id, [FromBody] Order order)
         {
-            var orderToPut = (new Order
+            var orderToPut = await _orderService.GetOrderByIdAsync(id);
+            if (orderToPut is null)
             {
-                OrderId = order.OrderId,
-                NameClient = order.NameClient,
-                Date = order.Date,
-                DosesCount = order.DosesCount,
-            });
-            return Ok( _orderService.UpdateOrder(id, orderToPut));    
+                return NotFound();
+            }
+            _mapper.Map(order, orderToPut);
+            await _orderService.UpdateOrderAsync(id, _mapper.Map<Order>(order));
+            orderToPut = await _orderService.GetOrderByIdAsync(id);
+            return Ok(_mapper.Map<OrderDTOs>(orderToPut));
         }
 
         // DELETE api/<OrdersController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            _orderService.DeleteOrder(id);
+            var order = await _orderService.GetOrderByIdAsync(id);
+            if (order is null)
+            {
+                return NotFound();
+            }
+
+            await _orderService.DeleteOrderAsync(id);
+            return NoContent();
         }
     }
 }

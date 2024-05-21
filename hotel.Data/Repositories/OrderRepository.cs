@@ -1,4 +1,5 @@
-﻿using Restaurant.Core.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Restaurant.Core.Models;
 using Restaurant.Core.Repositories;
 using System;
 using System.Collections.Generic;
@@ -15,45 +16,39 @@ namespace Restaurant.Data.Repositories
         {
             _context = context;
         }
-        Order IOrderRepository.AddOrder(Order Order)
-        {
-            _context.Orders.Add( new Order
-            {
-                OrderId = Order.OrderId,
-                NameClient = Order.NameClient,
-                Date = Order.Date,
-                DosesCount = Order.DosesCount,
-               // Doses= Order.Doses,
-               
-            });
-            _context.SaveChanges();
-            return Order;
 
-        }
-        void IOrderRepository.DeleteOrder(int id)
+        public async Task<Order> AddOrderAsync(Order order)
         {
-            var temp = _context.Orders.Find(id);
+            _context.Orders.Add(order);
+            await _context.SaveChangesAsync();
+            return order;
+        }
+
+        public async Task DeleteOrderAsync(int id)
+        {
+            var temp = await GetOrderByIdAsync(id);
             _context.Orders.Remove(temp);
-            _context.SaveChanges();
+            _context.SaveChangesAsync();
+        }
 
-        }
-        IEnumerable<Order> IOrderRepository.GetOrders()
+        public async Task<IEnumerable<Order>> GetOrdersAsync()
         {
-            return _context.Orders;
+            return await _context.Orders.ToListAsync();
         }
-        Order IOrderRepository.GetById(int id)
-        {
-            return _context.Orders.Find(id);
-        }
-        Order IOrderRepository.UpdateOrder(int id, Order Order)
-        {
-            var temp = _context.Orders.Find(id);
-            temp.NameClient=Order.NameClient;
-            temp.OrderId=id; 
-            temp.Date=Order.Date;
-            temp.DosesCount=Order.DosesCount;
-            _context.SaveChanges();
 
+        public async Task<Order> GetOrderByIdAsync(int id)
+        {
+            return await _context.Orders.FirstAsync(x => x.OrderId == id);
+        }
+
+        public async Task<Order> UpdateOrderAsync(int id, Order Order)
+        {
+            var temp = await GetOrderByIdAsync(id);
+            temp.NameClient = Order.NameClient;
+            temp.OrderId = id;
+            temp.Date = Order.Date;
+            temp.DosesCount = Order.DosesCount;
+            await _context.SaveChangesAsync();
             return temp;
         }
     }

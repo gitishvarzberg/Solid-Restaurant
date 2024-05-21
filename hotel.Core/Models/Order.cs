@@ -13,12 +13,8 @@ namespace Restaurant.Core.Models
         public DateTime Date { get; set; }
         public int DosesCount { get; set; }
         public List<Dose> Doses { get; set; }
-        public List<Employee> Employes { get; set; }
+       
 
-        //public Order()
-        //{
-        //    Doses = new List<Dose>();
-        //}
 
     }
 }

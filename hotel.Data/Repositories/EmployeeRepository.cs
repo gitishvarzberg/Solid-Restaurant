@@ -1,4 +1,5 @@
-﻿using Restaurant.Core.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Restaurant.Core.Models;
 using Restaurant.Core.Repositories;
 using System;
 using System.Collections.Generic;
@@ -15,36 +16,43 @@ namespace Restaurant.Data.Repositories
         {
             _context = context;
         }
-        Employee IEmployeeRepository.AddEmployee(Employee Employee)
-        {
-            _context.Employees.Add(Employee);
-            _context.SaveChanges();
-            return Employee;
+   
 
-        }
-        void IEmployeeRepository.DeleteEmployee(int id)
+        public async Task<Employee> AddEmployeeAsync(Employee employee)
         {
-            var temp = _context.Employees.Find(id);
+            _context.Employees.Add(employee);
+            await _context.SaveChangesAsync();
+            return employee;
+        }
+
+        public async Task DeleteEmployeeAsync(int id)
+        {
+            var temp = await GetEmployeeByIdAsync(id);
             _context.Employees.Remove(temp);
-            _context.SaveChanges();
-        }
-        IEnumerable<Employee> IEmployeeRepository.GetEmployees()
-        {
-            return _context.Employees;
-        }
-        Employee IEmployeeRepository.GetById(int id)
-        {
-            return _context.Employees.Find(id);
+            _context.SaveChangesAsync();
 
         }
-        Employee IEmployeeRepository.UpdateEmployee(int id, Employee Employee)
+
+        public async Task<IEnumerable<Employee>> GetEmployeesAsync()
         {
-            var temp = _context.Employees.Find(id);
-            temp.Name=Employee.Name;
-            temp.PhoneNumber=Employee.PhoneNumber;
-            temp.EmployeeId=id;
-            _context.SaveChanges();
+            return await _context.Employees.ToListAsync();
+        }
+
+        public async Task<Employee> GetEmployeeByIdAsync(int id)
+        {
+            return await _context.Employees.FirstAsync(x => x.EmployeeId == id);
+        }
+
+        public async Task<Employee> UpdateEmployeeAsync(int id, Employee Employee)
+        {
+
+            var temp = await GetEmployeeByIdAsync(id);
+            temp.Name = Employee.Name;
+            temp.PhoneNumber = Employee.PhoneNumber;
+            temp.EmployeeId = id;
+            await _context.SaveChangesAsync();
             return temp;
+     
         }
     }
 }

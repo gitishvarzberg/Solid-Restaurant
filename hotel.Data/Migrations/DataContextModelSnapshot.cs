@@ -22,21 +22,6 @@ namespace Restaurant.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("EmployeeOrder", b =>
-                {
-                    b.Property<int>("EmployesEmployeeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("OrdersOrderId")
-                        .HasColumnType("int");
-
-                    b.HasKey("EmployesEmployeeId", "OrdersOrderId");
-
-                    b.HasIndex("OrdersOrderId");
-
-                    b.ToTable("EmployeeOrder");
-                });
-
             modelBuilder.Entity("Restaurant.Core.Models.Dose", b =>
                 {
                     b.Property<int>("DoseId")
@@ -104,21 +89,6 @@ namespace Restaurant.Data.Migrations
                     b.HasKey("OrderId");
 
                     b.ToTable("Orders");
-                });
-
-            modelBuilder.Entity("EmployeeOrder", b =>
-                {
-                    b.HasOne("Restaurant.Core.Models.Employee", null)
-                        .WithMany()
-                        .HasForeignKey("EmployesEmployeeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Restaurant.Core.Models.Order", null)
-                        .WithMany()
-                        .HasForeignKey("OrdersOrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Restaurant.Core.Models.Dose", b =>

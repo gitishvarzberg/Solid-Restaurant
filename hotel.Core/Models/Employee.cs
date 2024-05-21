@@ -13,12 +13,5 @@ namespace Restaurant.Core.Models
         public string PhoneNumber { get; set; }
         public List<Order> Orders { get; set; }
 
-        //public Employee()
-        //{
-
-        //    Orders = new List<Order>();
-
-        //}
-
     }
 }

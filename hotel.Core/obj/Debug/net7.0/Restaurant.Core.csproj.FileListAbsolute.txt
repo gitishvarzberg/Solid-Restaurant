@@ -22,3 +22,15 @@ D:\Users\User\Desktop\תכנות\dotnet\‏‏תיקיה חדשה\lesson3\hotel.
 D:\Users\User\Desktop\תכנות\dotnet\‏‏תיקיה חדשה\lesson3\hotel.Core\obj\Debug\net7.0\refint\Restaurant.Core.dll
 D:\Users\User\Desktop\תכנות\dotnet\‏‏תיקיה חדשה\lesson3\hotel.Core\obj\Debug\net7.0\Restaurant.Core.pdb
 D:\Users\User\Desktop\תכנות\dotnet\‏‏תיקיה חדשה\lesson3\hotel.Core\obj\Debug\net7.0\ref\Restaurant.Core.dll
+D:\Users\User\Desktop\‏‏תיקיה חדשה\Solid-Restaurant\hotel.Core\bin\Debug\net7.0\Restaurant.Core.deps.json
+D:\Users\User\Desktop\‏‏תיקיה חדשה\Solid-Restaurant\hotel.Core\bin\Debug\net7.0\Restaurant.Core.dll
+D:\Users\User\Desktop\‏‏תיקיה חדשה\Solid-Restaurant\hotel.Core\bin\Debug\net7.0\Restaurant.Core.pdb
+D:\Users\User\Desktop\‏‏תיקיה חדשה\Solid-Restaurant\hotel.Core\obj\Debug\net7.0\Restaurant.Core.csproj.AssemblyReference.cache
+D:\Users\User\Desktop\‏‏תיקיה חדשה\Solid-Restaurant\hotel.Core\obj\Debug\net7.0\Restaurant.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\User\Desktop\‏‏תיקיה חדשה\Solid-Restaurant\hotel.Core\obj\Debug\net7.0\Restaurant.Core.AssemblyInfoInputs.cache
+D:\Users\User\Desktop\‏‏תיקיה חדשה\Solid-Restaurant\hotel.Core\obj\Debug\net7.0\Restaurant.Core.AssemblyInfo.cs
+D:\Users\User\Desktop\‏‏תיקיה חדשה\Solid-Restaurant\hotel.Core\obj\Debug\net7.0\Restaurant.Core.csproj.CoreCompileInputs.cache
+D:\Users\User\Desktop\‏‏תיקיה חדשה\Solid-Restaurant\hotel.Core\obj\Debug\net7.0\Restaurant.Core.dll
+D:\Users\User\Desktop\‏‏תיקיה חדשה\Solid-Restaurant\hotel.Core\obj\Debug\net7.0\refint\Restaurant.Core.dll
+D:\Users\User\Desktop\‏‏תיקיה חדשה\Solid-Restaurant\hotel.Core\obj\Debug\net7.0\Restaurant.Core.pdb
+D:\Users\User\Desktop\‏‏תיקיה חדשה\Solid-Restaurant\hotel.Core\obj\Debug\net7.0\ref\Restaurant.Core.dll

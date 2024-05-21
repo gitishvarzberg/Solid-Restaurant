@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "I/KpfxNxwfNHXOf8oaKV1/CvIlZS0ChlbsjFkgkIiX3Carn+4GHwZdhkMNQVymxdmYSvUbvaF8COGMVfwbS8hA==",
+  "dgSpecHash": "rF+ZzMYKnQ4VYzixci/aYD4tR439dO23ceHKGr9pbm1cRskNq7Spv1T8E9RxoNAMZbOoCq5bqIqh13dwLIvfxw==",
   "success": true,
-  "projectFilePath": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Core\\Restaurant.Core.csproj",
+  "projectFilePath": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Core\\Restaurant.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"

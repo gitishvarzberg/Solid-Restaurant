@@ -1,4 +1,5 @@
-﻿using Restaurant.Core.Models;
+﻿using Restaurant.Core.DTOs;
+using Restaurant.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,10 @@ namespace Restaurant.Core.Services
 {
     public interface IEmployeeService
     {
-         Employee AddEmployee(Employee Employee);
-         void DeleteEmployee(int id);
-         IEnumerable<Employee> GetEmployees();
-         Employee GetById(int id);
-         Employee UpdateEmployee(int id, Employee Employee);
+        Task<Employee> AddEmployeeAsync(Employee Employee);
+        Task DeleteEmployeeAsync(int id);
+        Task<IEnumerable<Employee>> GetEmployeesAsync();
+        Task<Employee> GetEmployeeByIdAsync(int id);
+        Task<Employee> UpdateEmployeeAsync(int id, Employee Employee);
     }
 }

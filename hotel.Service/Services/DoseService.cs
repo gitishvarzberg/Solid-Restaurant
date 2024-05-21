@@ -23,24 +23,24 @@ namespace Restaurant.Service.Services
            
         }
 
-        public void DeleteDose(int id)
+        public async Task<IEnumerable<Dose>> GetDosesAsync()
         {
-            _doseRepository.DeleteDose(id);
+            return await _doseRepository.GetDosesAsync();   
         }
 
-        IEnumerable<Dose> IDoseService.GetDoses()
+        public async Task<Dose> GetDoseByIdAsync(int id)
         {
-            return _doseRepository.GetDoses();
+            return await _doseRepository.GetDoseByIdAsync(id);   
         }
 
-        Dose IDoseService.GetById(int id)
+        public async Task DeleteDoseAsync(int id)
         {
-            return _doseRepository.GetById(id);
+            await _doseRepository.DeleteDoseAsync(id);  
         }
 
-        Dose IDoseService.UpdateDose(int id, Dose dose)
+        public async Task<Dose> UpdateDoseAsync(int id, Dose Dose)
         {
-            return _doseRepository.UpdateDose(id, dose);
+            return await _doseRepository.UpdateDoseAsync(id, Dose);   
         }
     }
 }

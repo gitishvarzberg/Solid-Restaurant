@@ -21,16 +21,17 @@ namespace lesson3.Controllers
 
         // GET: api/<MenuController>
         [HttpGet]
-        public ActionResult Get()
+        public async Task <ActionResult> Get()
         {
-            return Ok(_DoseService.GetDoses());
+            return Ok(await _DoseService.GetDosesAsync());
         }
 
         // GET api/<MenuController>/5
         [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        public async Task< ActionResult> Get(int id)
         {
-            return Ok( _DoseService.GetById(id));
+            var does = await _DoseService.GetDoseByIdAsync(id);
+            return Ok( does );
         }
 
         // POST api/<MenuController>
@@ -43,21 +44,21 @@ namespace lesson3.Controllers
 
         // PUT api/<MenuController>/5
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] Dose d)
+        public async Task <ActionResult> Put(int id, [FromBody] Dose d)
         {
-           return Ok( _DoseService.UpdateDose(id, d));
+           return Ok( await _DoseService.UpdateDoseAsync(id, d));
         }
 
         // DELETE api/<MenuController>/5
         [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        public async Task < ActionResult> Delete(int id)
         {
-            var temp = _DoseService.GetById(id);
+            var temp =await _DoseService.GetDoseByIdAsync(id);
             if (temp is null)
             {
                 return NotFound();
             }
-            _DoseService.DeleteDose(id);
+            await _DoseService.DeleteDoseAsync(id);
             return NoContent(); 
 
         }

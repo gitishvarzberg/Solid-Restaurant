@@ -17,43 +17,38 @@ namespace Restaurant.Data.Repositories
         {
             _context = context;
         }
-        async Task<Dose> IDoseRepository.AddDoseAsync(Dose Dose) 
+        public async Task<Dose> AddDoseAsync(Dose Dose) 
         {
             _context.Doses.Add(Dose);
-            
             await _context.SaveChangesAsync();
             return Dose;
         }
-        void IDoseRepository.DeleteDose(int id)
-        { 
-            //
-            var temp = _context.Doses.Find(id);
+        public async Task DeleteDoseAsync(int id)
+        {
+            var temp = await GetDoseByIdAsync(id);
             _context.Doses.Remove(temp);
-            _context.SaveChanges();
+            _context.SaveChangesAsync();
 
         }
-        IEnumerable<Dose> IDoseRepository.GetDoses()
+        public async Task< IEnumerable<Dose>> GetDosesAsync()
         {
-            return _context.Doses;
-
+            return await _context.Doses.ToListAsync();
         }
-        Dose IDoseRepository.GetById(int id)
+        public async Task<Dose> GetDoseByIdAsync(int id)
         {
-            return _context.Doses.Find(id);
+            return await _context.Doses.FirstAsync(x=>x.DoseId == id);
         }
-        Dose IDoseRepository.UpdateDose(int id, Dose Dose)
+       public async Task< Dose> UpdateDoseAsync(int id, Dose Dose)
         {
-            var temp = _context.Doses.Find(id);
+            var temp = await GetDoseByIdAsync(id);
             temp.Price=Dose.Price;
             temp.Name=Dose.Name;
             temp.DoseId=id;
+             await _context.SaveChangesAsync();
+            return temp;    
        
-            
-            _context.SaveChanges();
-            return temp;
+     
         }
-
-        
 
     }
 }

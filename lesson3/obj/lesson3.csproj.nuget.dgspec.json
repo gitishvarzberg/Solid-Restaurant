@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\lesson3\\lesson3.csproj": {}
+    "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\lesson3\\lesson3.csproj": {}
   },
   "projects": {
-    "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Core\\Restaurant.Core.csproj": {
+    "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Core\\Restaurant.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Core\\Restaurant.Core.csproj",
+        "projectUniqueName": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Core\\Restaurant.Core.csproj",
         "projectName": "Restaurant.Core",
-        "projectPath": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Core\\Restaurant.Core.csproj",
+        "projectPath": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Core\\Restaurant.Core.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Core\\obj\\",
+        "outputPath": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,14 +69,14 @@
         }
       }
     },
-    "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Data\\Restaurant.Data.csproj": {
+    "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Data\\Restaurant.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Data\\Restaurant.Data.csproj",
+        "projectUniqueName": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Data\\Restaurant.Data.csproj",
         "projectName": "Restaurant.Data",
-        "projectPath": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Data\\Restaurant.Data.csproj",
+        "projectPath": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Data\\Restaurant.Data.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Data\\obj\\",
+        "outputPath": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -97,8 +97,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Core\\Restaurant.Core.csproj": {
-                "projectPath": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Core\\Restaurant.Core.csproj"
+              "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Core\\Restaurant.Core.csproj": {
+                "projectPath": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Core\\Restaurant.Core.csproj"
               }
             }
           }
@@ -144,14 +144,14 @@
         }
       }
     },
-    "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Service\\Restaurant.Service.csproj": {
+    "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Service\\Restaurant.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Service\\Restaurant.Service.csproj",
+        "projectUniqueName": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Service\\Restaurant.Service.csproj",
         "projectName": "Restaurant.Service",
-        "projectPath": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Service\\Restaurant.Service.csproj",
+        "projectPath": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Service\\Restaurant.Service.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Service\\obj\\",
+        "outputPath": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -172,8 +172,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Core\\Restaurant.Core.csproj": {
-                "projectPath": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Core\\Restaurant.Core.csproj"
+              "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Core\\Restaurant.Core.csproj": {
+                "projectPath": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Core\\Restaurant.Core.csproj"
               }
             }
           }
@@ -207,14 +207,14 @@
         }
       }
     },
-    "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\lesson3\\lesson3.csproj": {
+    "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\lesson3\\lesson3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\lesson3\\lesson3.csproj",
+        "projectUniqueName": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\lesson3\\lesson3.csproj",
         "projectName": "lesson3",
-        "projectPath": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\lesson3\\lesson3.csproj",
+        "projectPath": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\lesson3\\lesson3.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\lesson3\\obj\\",
+        "outputPath": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\lesson3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -236,14 +236,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Core\\Restaurant.Core.csproj": {
-                "projectPath": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Core\\Restaurant.Core.csproj"
+              "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Core\\Restaurant.Core.csproj": {
+                "projectPath": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Core\\Restaurant.Core.csproj"
               },
-              "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Data\\Restaurant.Data.csproj": {
-                "projectPath": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Data\\Restaurant.Data.csproj"
+              "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Data\\Restaurant.Data.csproj": {
+                "projectPath": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Data\\Restaurant.Data.csproj"
               },
-              "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Service\\Restaurant.Service.csproj": {
-                "projectPath": "D:\\Users\\User\\Desktop\\תכנות\\dotnet\\lesson3\\hotel.Service\\Restaurant.Service.csproj"
+              "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Service\\Restaurant.Service.csproj": {
+                "projectPath": "D:\\Users\\User\\Desktop\\‏‏תיקיה חדשה\\Solid-Restaurant\\hotel.Service\\Restaurant.Service.csproj"
               }
             }
           }

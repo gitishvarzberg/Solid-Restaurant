@@ -26,54 +26,57 @@ namespace lesson3.Controllers
 
         // GET: api/<EmployeesController>
         [HttpGet]
-        public ActionResult Get()
+        public async Task< ActionResult> Get()
         {
-            var employees = _employeeService.GetEmployees();
-            var employeesDTOs=_mapper.Map<IEnumerable<EmployeeDTOs>>(employees);
-            return Ok(employeesDTOs);
+            var employees =await _employeeService.GetEmployeesAsync();
+            return Ok(_mapper.Map<IEnumerable<EmployeeDTOs>>(employees));
         }
 
         // GET api/<EmployeesController>/5
         [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        public async Task< ActionResult> Get(int id)
         {   
-            var employee = _employeeService.GetById(id);
+            var employee =await _employeeService.GetEmployeeByIdAsync(id);
             var employeeDTOs=_mapper.Map<EmployeeDTOs>(employee);   
             return Ok(employeeDTOs);
         }
 
         // POST api/<EmployeesController>
         [HttpPost]
-        public ActionResult Post([FromBody] EmployeePostModel employee)
+        public async Task< ActionResult> Post([FromBody] EmployeePostModel employee)
         {
-            var employeeToAdd = (new Employee
-            {
-                EmployeeId = employee.EmployeeId,
-                Name = employee.Name,
-                PhoneNumber = employee.PhoneNumber, 
-            });
-          return Ok( _employeeService.AddEmployee(employeeToAdd));
+            var employeeToAdd =await _employeeService.AddEmployeeAsync(_mapper.Map<Employee>(employee));
+             return Ok(_mapper.Map<EmployeeDTOs>(employeeToAdd));
                 
         }
 
         // PUT api/<EmployeesController>/5
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] EmployeePostModel employee)
+        public async Task < ActionResult> Put(int id, [FromBody] EmployeePostModel employee)
         {
-            var employeeToPut = (new Employee
+            var employeeTemp = await _employeeService.GetEmployeeByIdAsync(id);
+            if (employeeTemp is null)
             {
-                EmployeeId = employee.EmployeeId,
-                Name = employee.Name,
-                PhoneNumber = employee.PhoneNumber,
-            });
-            return Ok( _employeeService.UpdateEmployee(id, employeeToPut));
+                return NotFound();
+            }
+            _mapper.Map(employee, employeeTemp);
+            await _employeeService.UpdateEmployeeAsync(id, _mapper.Map<Employee>(employee));
+            employeeTemp = await _employeeService.GetEmployeeByIdAsync(id);
+            return Ok(_mapper.Map<EmployeeDTOs>(employeeTemp));
         }
 
         // DELETE api/<EmployeesController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            _employeeService.DeleteEmployee(id);
+            var employee = await _employeeService.GetEmployeeByIdAsync(id);
+            if (employee is null)
+            {
+                return NotFound();
+            }
+
+            await _employeeService.DeleteEmployeeAsync(id);
+            return NoContent();
         }
     }
 }

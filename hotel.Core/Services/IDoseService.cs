@@ -10,10 +10,10 @@ namespace Restaurant.Core.Services
 {
     public interface IDoseService
     {
-         Task<Dose> AddDoseAsync(Dose Dose);
-         void DeleteDose(int id);
-         IEnumerable<Dose> GetDoses();
-         Dose GetById(int id);
-         Dose UpdateDose(int id, Dose Dose);
+        Task<IEnumerable<Dose>> GetDosesAsync();
+        Task<Dose> GetDoseByIdAsync(int id);
+        Task<Dose> AddDoseAsync(Dose Dose);
+        Task DeleteDoseAsync(int id);
+        Task<Dose> UpdateDoseAsync(int id, Dose Dose);
     }
 }
